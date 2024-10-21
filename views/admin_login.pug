@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title Admin Login
+    link(rel="stylesheet", href="assets/css/styles.css")
+    script(src="/formValidation.js") // Include form validation
+  body
+    header
+      h1 Admin Login
+    section
+      .login-container
+        form(action="/admin_login", method="POST", onsubmit="return validateAdminLogin()")
+          input(type="email" name="email" placeholder="email" required)
+          input(type="password" name="password" placeholder="Password" required)
+          button(type="submit") Login
+          p
+            a(href="/admin_register") Don't have an account? Register here
+    footer
+      p &copy; 2024 Exam Hub
